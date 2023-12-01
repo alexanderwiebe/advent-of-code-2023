@@ -31,18 +31,6 @@
         "enin" "9"
         s))
 
-(defn matchStringDigitBen [s]
-  (case s "one" "o1e"
-        "two" "t2o"
-        "three" "t3e"
-        "four" "f4r"
-        "five" "f5e"
-        "six" "s6x"
-        "seven" "s7n"
-        "eight" "e8t"
-        "nine" "n9e"
-        s))
-
 (defn firstDigit [s]
   (str/replace-first s #"one|two|three|four|five|six|seven|eight|nine|1|2|3|4|5|6|7|8|9" matchStringDigit))
 (firstDigit "2eightwothree3")
@@ -53,19 +41,6 @@
       (str/replace-first #"enin|thgie|neves|xis|evif|ruof|eerht|owt|eno|1|2|3|4|5|6|7|8|9" matchStringDigitR)
       (str/reverse)))
 (lastDigit "2eightwothree3")
-
-(defn replaceAll [s] ; not used
-  (str/replace s #"one|two|three|four|five|six|seven|eight|nine" matchStringDigitBen))
-(replaceAll "2eightwothree3")
-
-(defn lineFormat [l]
-  (->> l
-       (comp firstDigit
-             lastDigit
-             filter-numerics
-             (juxt first last))))
-(lineFormat "2eightwo3three3")
-
 
 (->> (slurp "/workspaces/codespaces-blank/01-day/real-input.txt")
      (str/split-lines)
