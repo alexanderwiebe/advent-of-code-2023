@@ -5,14 +5,8 @@
 ; Happy coding! ♥️
 
 ; Jacking in...
-; Connecting using "joyride" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
-; Jacking in...
 ; Connecting using "Babashka" project type.
 ; You can make Calva auto-select this.
 ;   - See https://calva.io/connect-sequences/
 ; 
-; Starting Jack-in Terminal: pushd /workspaces/codespaces-blank ; bb --nrepl-server 39591 ; popd
-; nREPL Connection was closed
+; Starting Jack-in Terminal: pushd /workspaces/codespaces-blank ; bb --nrepl-server 33577 ; popd
